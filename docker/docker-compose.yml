@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  web:
+    stdin_open: true
+    tty: true
+    image: elijah668/items-app-adapter:1.0.0
+    volumes:
+      - index:/items-app-adapter/build:ro
+  nginx:
+    image: elijah668/items-app-nginx:1.0.0
+    volumes:
+      - index:/usr/share/nginx/html
+    ports:
+      - "8080:80"
+volumes:
+  index:
+  data:

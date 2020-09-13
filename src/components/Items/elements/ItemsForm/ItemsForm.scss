@@ -1,0 +1,8 @@
+.ItemsForm {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @media (max-width: 420px) {
+  }
+}
